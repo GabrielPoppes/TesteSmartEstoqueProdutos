@@ -55,6 +55,18 @@ namespace SmartLaboratorio4.View
             this.txbQntVendida = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblInfoProdutosAtualizadas = new System.Windows.Forms.Label();
+            this.lblNomeAtualizado = new System.Windows.Forms.Label();
+            this.txbNomeAtualizado = new System.Windows.Forms.TextBox();
+            this.lblPrecoAtualizado = new System.Windows.Forms.Label();
+            this.txbPrecoAtualizado = new System.Windows.Forms.TextBox();
+            this.lblTotalBrutoFaturadoAtualizado = new System.Windows.Forms.Label();
+            this.txbTotalBrutoFaturadoAtualizado = new System.Windows.Forms.TextBox();
+            this.lblQntVendasAtualizada = new System.Windows.Forms.Label();
+            this.txbQntVendasAtualizado = new System.Windows.Forms.TextBox();
+            this.lblQntEstoqueAtualizado = new System.Windows.Forms.Label();
+            this.txbQntEstoqueAtualizado = new System.Windows.Forms.TextBox();
+            this.btnLimparCampos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,9 +139,9 @@ namespace SmartLaboratorio4.View
             this.lblQntEmVendas.AutoSize = true;
             this.lblQntEmVendas.Location = new System.Drawing.Point(24, 302);
             this.lblQntEmVendas.Name = "lblQntEmVendas";
-            this.lblQntEmVendas.Size = new System.Drawing.Size(117, 13);
+            this.lblQntEmVendas.Size = new System.Drawing.Size(115, 13);
             this.lblQntEmVendas.TabIndex = 9;
-            this.lblQntEmVendas.Text = "Quantidade em vendas";
+            this.lblQntEmVendas.Text = "Quantidade de vendas";
             // 
             // txbQntEmVendas
             // 
@@ -279,11 +291,122 @@ namespace SmartLaboratorio4.View
             this.panel3.Size = new System.Drawing.Size(954, 1);
             this.panel3.TabIndex = 23;
             // 
+            // lblInfoProdutosAtualizadas
+            // 
+            this.lblInfoProdutosAtualizadas.AutoSize = true;
+            this.lblInfoProdutosAtualizadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoProdutosAtualizadas.Location = new System.Drawing.Point(650, 294);
+            this.lblInfoProdutosAtualizadas.Name = "lblInfoProdutosAtualizadas";
+            this.lblInfoProdutosAtualizadas.Size = new System.Drawing.Size(210, 24);
+            this.lblInfoProdutosAtualizadas.TabIndex = 2;
+            this.lblInfoProdutosAtualizadas.Text = "Informações atualizadas";
+            // 
+            // lblNomeAtualizado
+            // 
+            this.lblNomeAtualizado.AutoSize = true;
+            this.lblNomeAtualizado.Location = new System.Drawing.Point(514, 331);
+            this.lblNomeAtualizado.Name = "lblNomeAtualizado";
+            this.lblNomeAtualizado.Size = new System.Drawing.Size(35, 13);
+            this.lblNomeAtualizado.TabIndex = 25;
+            this.lblNomeAtualizado.Text = "Nome";
+            // 
+            // txbNomeAtualizado
+            // 
+            this.txbNomeAtualizado.Location = new System.Drawing.Point(637, 328);
+            this.txbNomeAtualizado.Name = "txbNomeAtualizado";
+            this.txbNomeAtualizado.Size = new System.Drawing.Size(247, 20);
+            this.txbNomeAtualizado.TabIndex = 24;
+            // 
+            // lblPrecoAtualizado
+            // 
+            this.lblPrecoAtualizado.AutoSize = true;
+            this.lblPrecoAtualizado.Location = new System.Drawing.Point(514, 357);
+            this.lblPrecoAtualizado.Name = "lblPrecoAtualizado";
+            this.lblPrecoAtualizado.Size = new System.Drawing.Size(35, 13);
+            this.lblPrecoAtualizado.TabIndex = 27;
+            this.lblPrecoAtualizado.Text = "Preço";
+            // 
+            // txbPrecoAtualizado
+            // 
+            this.txbPrecoAtualizado.Location = new System.Drawing.Point(637, 354);
+            this.txbPrecoAtualizado.Name = "txbPrecoAtualizado";
+            this.txbPrecoAtualizado.Size = new System.Drawing.Size(247, 20);
+            this.txbPrecoAtualizado.TabIndex = 26;
+            // 
+            // lblTotalBrutoFaturadoAtualizado
+            // 
+            this.lblTotalBrutoFaturadoAtualizado.AutoSize = true;
+            this.lblTotalBrutoFaturadoAtualizado.Location = new System.Drawing.Point(514, 383);
+            this.lblTotalBrutoFaturadoAtualizado.Name = "lblTotalBrutoFaturadoAtualizado";
+            this.lblTotalBrutoFaturadoAtualizado.Size = new System.Drawing.Size(100, 13);
+            this.lblTotalBrutoFaturadoAtualizado.TabIndex = 28;
+            this.lblTotalBrutoFaturadoAtualizado.Text = "Total bruto faturado";
+            // 
+            // txbTotalBrutoFaturadoAtualizado
+            // 
+            this.txbTotalBrutoFaturadoAtualizado.Location = new System.Drawing.Point(637, 380);
+            this.txbTotalBrutoFaturadoAtualizado.Name = "txbTotalBrutoFaturadoAtualizado";
+            this.txbTotalBrutoFaturadoAtualizado.Size = new System.Drawing.Size(247, 20);
+            this.txbTotalBrutoFaturadoAtualizado.TabIndex = 29;
+            // 
+            // lblQntVendasAtualizada
+            // 
+            this.lblQntVendasAtualizada.AutoSize = true;
+            this.lblQntVendasAtualizada.Location = new System.Drawing.Point(514, 409);
+            this.lblQntVendasAtualizada.Name = "lblQntVendasAtualizada";
+            this.lblQntVendasAtualizada.Size = new System.Drawing.Size(115, 13);
+            this.lblQntVendasAtualizada.TabIndex = 30;
+            this.lblQntVendasAtualizada.Text = "Quantidade de vendas";
+            // 
+            // txbQntVendasAtualizado
+            // 
+            this.txbQntVendasAtualizado.Location = new System.Drawing.Point(637, 406);
+            this.txbQntVendasAtualizado.Name = "txbQntVendasAtualizado";
+            this.txbQntVendasAtualizado.Size = new System.Drawing.Size(247, 20);
+            this.txbQntVendasAtualizado.TabIndex = 31;
+            // 
+            // lblQntEstoqueAtualizado
+            // 
+            this.lblQntEstoqueAtualizado.AutoSize = true;
+            this.lblQntEstoqueAtualizado.Location = new System.Drawing.Point(514, 435);
+            this.lblQntEstoqueAtualizado.Name = "lblQntEstoqueAtualizado";
+            this.lblQntEstoqueAtualizado.Size = new System.Drawing.Size(120, 13);
+            this.lblQntEstoqueAtualizado.TabIndex = 32;
+            this.lblQntEstoqueAtualizado.Text = "Quantidade em estoque";
+            // 
+            // txbQntEstoqueAtualizado
+            // 
+            this.txbQntEstoqueAtualizado.Location = new System.Drawing.Point(637, 432);
+            this.txbQntEstoqueAtualizado.Name = "txbQntEstoqueAtualizado";
+            this.txbQntEstoqueAtualizado.Size = new System.Drawing.Size(247, 20);
+            this.txbQntEstoqueAtualizado.TabIndex = 33;
+            // 
+            // btnLimparCampos
+            // 
+            this.btnLimparCampos.Location = new System.Drawing.Point(637, 458);
+            this.btnLimparCampos.Name = "btnLimparCampos";
+            this.btnLimparCampos.Size = new System.Drawing.Size(247, 39);
+            this.btnLimparCampos.TabIndex = 34;
+            this.btnLimparCampos.Text = "Limpar campos";
+            this.btnLimparCampos.UseVisualStyleBackColor = true;
+            // 
             // frmCadastrarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 594);
+            this.Controls.Add(this.btnLimparCampos);
+            this.Controls.Add(this.lblQntEstoqueAtualizado);
+            this.Controls.Add(this.txbQntEstoqueAtualizado);
+            this.Controls.Add(this.lblQntVendasAtualizada);
+            this.Controls.Add(this.txbQntVendasAtualizado);
+            this.Controls.Add(this.lblTotalBrutoFaturadoAtualizado);
+            this.Controls.Add(this.txbTotalBrutoFaturadoAtualizado);
+            this.Controls.Add(this.lblPrecoAtualizado);
+            this.Controls.Add(this.txbPrecoAtualizado);
+            this.Controls.Add(this.lblNomeAtualizado);
+            this.Controls.Add(this.txbNomeAtualizado);
+            this.Controls.Add(this.lblInfoProdutosAtualizadas);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblQntVendida);
@@ -346,5 +469,17 @@ namespace SmartLaboratorio4.View
         private System.Windows.Forms.TextBox txbQntVendida;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblInfoProdutosAtualizadas;
+        private System.Windows.Forms.Label lblNomeAtualizado;
+        private System.Windows.Forms.TextBox txbNomeAtualizado;
+        private System.Windows.Forms.Label lblPrecoAtualizado;
+        private System.Windows.Forms.TextBox txbPrecoAtualizado;
+        private System.Windows.Forms.Label lblTotalBrutoFaturadoAtualizado;
+        private System.Windows.Forms.TextBox txbTotalBrutoFaturadoAtualizado;
+        private System.Windows.Forms.Label lblQntVendasAtualizada;
+        private System.Windows.Forms.TextBox txbQntVendasAtualizado;
+        private System.Windows.Forms.Label lblQntEstoqueAtualizado;
+        private System.Windows.Forms.TextBox txbQntEstoqueAtualizado;
+        private System.Windows.Forms.Button btnLimparCampos;
     }
 }

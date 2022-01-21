@@ -31,7 +31,6 @@ namespace SmartLaboratorio4.View
         {
             Produto produto = new Produto(Convert.ToInt32(txbCodigo.Text), txbNome.Text, txbFabricante.Text, Convert.ToDouble(txbPreco.Text), Convert.ToDouble(txbTotalBrutoFaturado.Text), Convert.ToInt32(txbQntEmVendas.Text), Convert.ToInt32(txbQntEmEstoque.Text));
             p.ListaProdutos.Add(produto);
-            MessageBox.Show("Teste");
             InserirCodigoNoComboBox();
         }
         #endregion
@@ -47,13 +46,14 @@ namespace SmartLaboratorio4.View
         }
         #endregion
 
-        public void btnTeste_Click(object sender, EventArgs e)
+        public void btnTeste_Click(object sender, EventArgs e) // BOTÃO DE TESTE - DELETAR DEPOIS DE FINALIZAR
         {
             foreach (Produto c in p.ListaProdutos)
             {                
                 MessageBox.Show(c.Nome);                
                 MessageBox.Show(c.Fabricante);                
                 MessageBox.Show(Convert.ToString(c.QuantidadeEmEstoque));                
+                MessageBox.Show(Convert.ToString(c.QuantidadeDeVendas));                
                 MessageBox.Show(Convert.ToString(c.TotalBrutoFaturado));                
             }
         }
@@ -79,10 +79,28 @@ namespace SmartLaboratorio4.View
 
             #region Atualizando a quantidade em estoque do produto, e o valor total faturado - com base na entrada de dados do usuário
             Produto produtoAtualizacao = p.ListaProdutos.FirstOrDefault(a => a.Codigo == codigoProduto);
-            produtoAtualizacao.QuantidadeEmEstoque -= qntVendas;
-            produtoAtualizacao.TotalBrutoFaturado += (produtoAtualizacao.Preco * qntVendas);
+
+            produtoAtualizacao.QuantidadeEmEstoque -= qntVendas; // Atualizando a quantidade do produto em estoque
+            produtoAtualizacao.QuantidadeDeVendas += qntVendas; // Atualizando a quantidade de vendas do produto
+            produtoAtualizacao.TotalBrutoFaturado += (produtoAtualizacao.Preco * qntVendas); // Atualizando o valor total vendido daquele produto
+            #endregion
+
+            #region Exibindo informações atualizadas sobre o produto - no campo "Informações atualizadas
+            ExibirRegistrosAtualizados(codigoProduto);
             #endregion
         }
         #endregion
+
+        public void ExibirRegistrosAtualizados(int codigoProduto)
+        {
+            Produto produtoAtualizacao = p.ListaProdutos.FirstOrDefault(a => a.Codigo == codigoProduto);
+
+            txbNomeAtualizado.Text = produtoAtualizacao.Nome;
+            txbPrecoAtualizado.Text = Convert.ToString(produtoAtualizacao.Preco);
+            txbTotalBrutoFaturadoAtualizado.Text = Convert.ToString(produtoAtualizacao.TotalBrutoFaturado);
+            txbQntVendasAtualizado.Text = Convert.ToString(produtoAtualizacao.QuantidadeDeVendas);
+            txbQntEstoqueAtualizado.Text = Convert.ToString(produtoAtualizacao.QuantidadeEmEstoque);
+
+        }
     }
 }
