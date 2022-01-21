@@ -44,7 +44,6 @@ namespace SmartLaboratorio4.View
             this.btnAdicionarProduto = new System.Windows.Forms.Button();
             this.lblPreco = new System.Windows.Forms.Label();
             this.txbPreco = new System.Windows.Forms.TextBox();
-            this.btnTeste = new System.Windows.Forms.Button();
             this.comboBoxCodigo = new System.Windows.Forms.ComboBox();
             this.btnAtualizarEstoque = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -192,16 +191,6 @@ namespace SmartLaboratorio4.View
             this.txbPreco.Size = new System.Drawing.Size(247, 20);
             this.txbPreco.TabIndex = 6;
             // 
-            // btnTeste
-            // 
-            this.btnTeste.Location = new System.Drawing.Point(147, 405);
-            this.btnTeste.Name = "btnTeste";
-            this.btnTeste.Size = new System.Drawing.Size(247, 39);
-            this.btnTeste.TabIndex = 15;
-            this.btnTeste.Text = "Testar lista";
-            this.btnTeste.UseVisualStyleBackColor = true;
-            this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
-            // 
             // comboBoxCodigo
             // 
             this.comboBoxCodigo.FormattingEnabled = true;
@@ -314,6 +303,7 @@ namespace SmartLaboratorio4.View
             // 
             this.txbNomeAtualizado.Location = new System.Drawing.Point(637, 328);
             this.txbNomeAtualizado.Name = "txbNomeAtualizado";
+            this.txbNomeAtualizado.ReadOnly = true;
             this.txbNomeAtualizado.Size = new System.Drawing.Size(247, 20);
             this.txbNomeAtualizado.TabIndex = 24;
             // 
@@ -330,6 +320,7 @@ namespace SmartLaboratorio4.View
             // 
             this.txbPrecoAtualizado.Location = new System.Drawing.Point(637, 354);
             this.txbPrecoAtualizado.Name = "txbPrecoAtualizado";
+            this.txbPrecoAtualizado.ReadOnly = true;
             this.txbPrecoAtualizado.Size = new System.Drawing.Size(247, 20);
             this.txbPrecoAtualizado.TabIndex = 26;
             // 
@@ -346,6 +337,7 @@ namespace SmartLaboratorio4.View
             // 
             this.txbTotalBrutoFaturadoAtualizado.Location = new System.Drawing.Point(637, 380);
             this.txbTotalBrutoFaturadoAtualizado.Name = "txbTotalBrutoFaturadoAtualizado";
+            this.txbTotalBrutoFaturadoAtualizado.ReadOnly = true;
             this.txbTotalBrutoFaturadoAtualizado.Size = new System.Drawing.Size(247, 20);
             this.txbTotalBrutoFaturadoAtualizado.TabIndex = 29;
             // 
@@ -362,6 +354,7 @@ namespace SmartLaboratorio4.View
             // 
             this.txbQntVendasAtualizado.Location = new System.Drawing.Point(637, 406);
             this.txbQntVendasAtualizado.Name = "txbQntVendasAtualizado";
+            this.txbQntVendasAtualizado.ReadOnly = true;
             this.txbQntVendasAtualizado.Size = new System.Drawing.Size(247, 20);
             this.txbQntVendasAtualizado.TabIndex = 31;
             // 
@@ -378,6 +371,7 @@ namespace SmartLaboratorio4.View
             // 
             this.txbQntEstoqueAtualizado.Location = new System.Drawing.Point(637, 432);
             this.txbQntEstoqueAtualizado.Name = "txbQntEstoqueAtualizado";
+            this.txbQntEstoqueAtualizado.ReadOnly = true;
             this.txbQntEstoqueAtualizado.Size = new System.Drawing.Size(247, 20);
             this.txbQntEstoqueAtualizado.TabIndex = 33;
             // 
@@ -389,6 +383,7 @@ namespace SmartLaboratorio4.View
             this.btnLimparCampos.TabIndex = 34;
             this.btnLimparCampos.Text = "Limpar campos";
             this.btnLimparCampos.UseVisualStyleBackColor = true;
+            this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
             // 
             // frmCadastrarProduto
             // 
@@ -415,7 +410,6 @@ namespace SmartLaboratorio4.View
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAtualizarEstoque);
             this.Controls.Add(this.comboBoxCodigo);
-            this.Controls.Add(this.btnTeste);
             this.Controls.Add(this.lblPreco);
             this.Controls.Add(this.txbPreco);
             this.Controls.Add(this.btnAdicionarProduto);
@@ -433,6 +427,7 @@ namespace SmartLaboratorio4.View
             this.Controls.Add(this.txbCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastrarProduto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastrarProduto";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -458,7 +453,6 @@ namespace SmartLaboratorio4.View
         private System.Windows.Forms.Button btnAdicionarProduto;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.TextBox txbPreco;
-        private System.Windows.Forms.Button btnTeste;
         private System.Windows.Forms.ComboBox comboBoxCodigo;
         private System.Windows.Forms.Button btnAtualizarEstoque;
         private System.Windows.Forms.Panel panel1;

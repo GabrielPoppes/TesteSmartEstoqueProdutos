@@ -31,7 +31,6 @@ namespace SmartLaboratorio4
         {
             this.pnlLateral = new System.Windows.Forms.Panel();
             this.pnlSubBotoes = new System.Windows.Forms.Panel();
-            this.btnMostrarProdutos = new System.Windows.Forms.Button();
             this.btnCadastrarProduto = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
             this.pnlLateralTop = new System.Windows.Forms.Panel();
@@ -58,28 +57,12 @@ namespace SmartLaboratorio4
             // pnlSubBotoes
             // 
             this.pnlSubBotoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(204)))));
-            this.pnlSubBotoes.Controls.Add(this.btnMostrarProdutos);
             this.pnlSubBotoes.Controls.Add(this.btnCadastrarProduto);
             this.pnlSubBotoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubBotoes.Location = new System.Drawing.Point(0, 188);
             this.pnlSubBotoes.Name = "pnlSubBotoes";
-            this.pnlSubBotoes.Size = new System.Drawing.Size(189, 69);
+            this.pnlSubBotoes.Size = new System.Drawing.Size(189, 41);
             this.pnlSubBotoes.TabIndex = 2;
-            // 
-            // btnMostrarProdutos
-            // 
-            this.btnMostrarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(204)))));
-            this.btnMostrarProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMostrarProdutos.FlatAppearance.BorderSize = 0;
-            this.btnMostrarProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnMostrarProdutos.Location = new System.Drawing.Point(0, 37);
-            this.btnMostrarProdutos.Name = "btnMostrarProdutos";
-            this.btnMostrarProdutos.Padding = new System.Windows.Forms.Padding(0, 0, 60, 0);
-            this.btnMostrarProdutos.Size = new System.Drawing.Size(189, 37);
-            this.btnMostrarProdutos.TabIndex = 4;
-            this.btnMostrarProdutos.Text = "Exibir";
-            this.btnMostrarProdutos.UseVisualStyleBackColor = false;
             // 
             // btnCadastrarProduto
             // 
@@ -148,6 +131,7 @@ namespace SmartLaboratorio4
             this.Controls.Add(this.pnlDefault);
             this.Controls.Add(this.pnlLateral);
             this.Name = "frmInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de estoque";
             this.pnlLateral.ResumeLayout(false);
             this.pnlSubBotoes.ResumeLayout(false);
@@ -164,7 +148,6 @@ namespace SmartLaboratorio4
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Panel pnlSubBotoes;
-        private System.Windows.Forms.Button btnMostrarProdutos;
         private System.Windows.Forms.Button btnCadastrarProduto;
         private System.Windows.Forms.Panel pnlDefault;
     }
